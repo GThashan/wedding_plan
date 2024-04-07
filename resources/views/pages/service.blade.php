@@ -1,10 +1,6 @@
 @extends('layout.layout3')
 
 @section('service-content')
-
-
-
-
 <div class="container mt-4">
 
     @if(session('success'))
@@ -14,6 +10,7 @@
     @endif
     @yield('content')
 </div>
+
 
 @yield('scripts')
 

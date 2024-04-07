@@ -26,7 +26,7 @@
           </div>
 
           <div class="links">
-            Don't have an account <a href="{{ route("signUp") }}">Signup</a>
+           <p> Don't have an account</p> <a href="{{ route("signUp") }}">Signup</a>
           </div>
 
           <div class="inputBox">

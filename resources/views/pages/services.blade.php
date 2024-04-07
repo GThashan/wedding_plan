@@ -2,23 +2,29 @@
 
 @section('content')
 
-<div class="cards">
-    @foreach($services as $service)
-        <div class=" mb-4">
-            <div class="card">
+<div class="container_s">
+    @foreach($services as $key => $service)
+    {{-- @foreach($services as $service) --}}
+
+
+        <div class="card" data-name="p-{{ $key + 1 }}">
+            <div class="card-header">
                 <img src="{{ asset('images') }}/{{ $service->image }}" class="card-img-top"/>
-                <div class="card-body">
-                    <h4 class="card-title">{{ $service->name }}</h4>
-                    <p>{{ $service->author }}</p>
-                    <p class="card-text"><strong>Price: </strong> RS .{{ $service->price }}</p>
-                    <div class="select">
-                    <p class="btn-holder"><a href="{{ route('addbook.to.cart', $service->id) }}" class="btn btn-outline-danger">Choose</a> </p>
-                    <p class="btn-holder"><a href="" class="btn btn-outline-success">View More</a> </p>
-                </div>
-                </div>
             </div>
-        </div>
+            <div class="card-body">
+                <h2 class="card-title">{{ $service->name }}</h2>
+              <p>{{ $service->info }}</p>
+
+            </div>
+          </div>
+
     @endforeach
 </div>
-
+@include('components.preview')
 @endsection
+
+
+
+
+
+

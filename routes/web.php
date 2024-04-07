@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,17 @@ use App\Http\Controllers\ServiceController;
 Route::get('/', function () {
     return view('pages.home');
 });
+Route::get('/ser', function () {
+    return view('pages.ser');
+});
 Route::get('/checking', function () {
     return view('pages.checking');
 })->name('checking');
+Route::get('/admin', function () {
+    return view('pages.Adminservice');
+})->name('admin');
+
+
 
 
 
@@ -35,4 +44,13 @@ Route::get('/shopping-cart', [ServiceController::class, 'bookCart'])->name('shop
 Route::get('/book/{id}', [ServiceController::class, 'addBooktoCart'])->name('addbook.to.cart');
 Route::patch('/update-shopping-cart', [ServiceController::class, 'updateCart'])->name('update.sopping.cart');
 Route::delete('/delete-cart-product', [ServiceController::class, 'deleteProduct'])->name('delete.cart.product');
+Route::delete('/admin/{id}', [ServiceController::class, 'deleteProductadmin'])->name('delete.Productadmin');
+Route::post('/storeservice', [ServiceController::class, 'storeservice'])->name('storeservice');
+Route::get('/admin', [ServiceController::class, 'showServices'])->name('admin');
+
+
+Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+
+Route::get('/view', [CheckoutController::class, 'showProducts'])->name('view');
+
 

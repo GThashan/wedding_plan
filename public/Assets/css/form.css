@@ -13,7 +13,8 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(20, 17, 20);
+  background: #f3bfd9;
+  /* background-color: #ffffff; */
   /* background:url('https://images.pexels.com/photos/4862865/pexels-photo-4862865.jpeg?auto=compress&cs=tinysrgb&w=600');
   background-repeat:no-repeat;
   background-image: cover; */
@@ -31,9 +32,12 @@ body
   background: rgba(0, 0, 0, 0.8);
 } */
 .user_profile{
-  color: #fff;
+  /* color: #fff; */
   font-size: 50px;
-  color: #D63484;
+  color:#D63484 ;
+}
+.content h2{
+    color:#D63484 ;
 }
 section
 {
@@ -86,8 +90,8 @@ section .signin
   position: absolute;
   width: 400px;
   border: 2px solid #fff;
-  /* background: #f3bfd9; */
-  background: transparent;
+  background: #ffffff;
+  /* background: transparent; */
 
   z-index: 1000;
   display: flex;
@@ -118,7 +122,7 @@ section .signin .content
 section .signin .content h2
 {
   font-size: 2em;
-  color: #fff;
+  /* color: #fff; */
   text-transform: uppercase;
   /* margin-top: -35px; */
 }
@@ -141,11 +145,11 @@ section .signin .content .form .inputBox input
   width: 100%;
   /* background: #333; */
   background: transparent;
-  border: 2px solid rgb(202, 202, 202);
+  border: 1px solid #D63484;
   outline: none;
   padding: 25px 10px 7.5px;
   border-radius: 4px;
-  color: #fff;
+  /* color: #fff; */
   font-weight: 500;
   font-size: 1em;
 }
@@ -155,7 +159,7 @@ section .signin .content .form .inputBox i
   left: 0;
   padding: 15px 10px;
   font-style: normal;
-  color: rgb(189, 186, 186);
+  color: rgb(43, 37, 37);
   transition: 0.5s;
   pointer-events: none;
 }
@@ -174,6 +178,10 @@ section .signin .content .form .inputBox i
   justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+.signin .content .form .links p{
+    color: rgb(189, 3, 3);
+
 }
 .signin .content .form .links a
 {

@@ -41,7 +41,7 @@
           </div>
 
           <div class="links">
-            Already have an account  <a href={{ route('login') }}>Login</a>
+            <p>Already have an account</p>  <a href={{ route('login') }}>Login</a>
           </div>
 
           <div class="inputBox">

@@ -6,7 +6,26 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 
 class ServiceController extends Controller
-{
+{    public function storeservice(Request $request)
+    {
+    $service = new Service();
+
+    // Assign values from the request to model properties
+    $service->name = $request->name;
+    $service->info = $request->info;
+    $service->image = $request->image;
+    $service->price= $request->price;
+
+
+
+
+    $service->save();
+
+
+    return redirect()->route('admin')->with('success', 'Form submitted successfully!');
+
+    }
+
     public function index()
     {
         $services = Service::all();
@@ -56,4 +75,30 @@ class ServiceController extends Controller
             session()->flash('success', 'Service successfully deleted.');
         }
     }
+
+
+    public function showServices()
+    {
+        $products = Service::all();
+        return view('pages.Adminservice', compact('products'));
+    }
+
+    public function deleteProductadmin($id)
+    {
+        if($id) {
+            $product = Product::find($id);
+            if($product) {
+                $product->delete();
+                session()->flash('success', 'Product successfully deleted.');
+            } else {
+                session()->flash('error', 'Product not found.');
+            }
+        } else {
+            session()->flash('error', 'Invalid product ID.');
+        }
+        return redirect()->route('admin');
+    }
+
+
+
 }
