@@ -99,6 +99,14 @@ class ServiceController extends Controller
         return redirect()->route('admin');
     }
 
+    public function remove($id)
+    {
+        $service = Service::find($id);
+        $service->delete();
+        return redirect()->route('admin')->with('success', 'Service has been deleted');;
+
+    }
+
 
 
 }

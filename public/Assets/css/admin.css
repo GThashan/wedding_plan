@@ -53,6 +53,12 @@ html{
     cursor: pointer;
     border-radius: 4px;
 }
+.delete a{
+    color: white;
+}
+.delete i{
+    color: white;
+}
 .delete:hover{
     background-color: #be2873;
 

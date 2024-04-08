@@ -22,7 +22,7 @@
             title: 'Success!',
             text: '{{ session('success') }}',
             showConfirmButton: false,
-            timer: 3000
+            timer: 6000
         });
     </script>
 @endif

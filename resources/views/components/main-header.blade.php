@@ -15,6 +15,7 @@
             <a href="{{ url('/ser') }}">Testimonial</a>
             <a href="{{ url('/ser') }}">Contact Us</a>
 
+
             <form action="{{ route('login') }}" method="POST">
                 @csrf
                 @method('GET')
@@ -25,6 +26,7 @@
 
 
         </ul>
+
 
 
       </div>

@@ -48,6 +48,8 @@ Route::delete('/admin/{id}', [ServiceController::class, 'deleteProductadmin'])->
 Route::post('/storeservice', [ServiceController::class, 'storeservice'])->name('storeservice');
 Route::get('/admin', [ServiceController::class, 'showServices'])->name('admin');
 
+Route::get('delete/{id}',[ServiceController::class, 'remove']);
+
 
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/view', [CheckoutController::class, 'showProducts'])->name('view');
