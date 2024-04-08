@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     $user->save();
 
-    // return view('pages.login')->with('success', 'Register successfully');
+
     return back()->with('success', 'Register sucessfully! Go to login');
    }
 
@@ -31,18 +31,52 @@ class AuthController extends Controller
     return view('pages.login');
    }
 
-   public function loginPost(Request $request){
-    $credetials = [
+//    public function loginPost(Request $request){
+//     $credetials = [
+//         'name' => $request->name,
+//         'password' => $request->password,
+//     ];
+
+//     if (Auth::attempt($credetials)) {
+//         return redirect('services')->with('success', 'Login Success');
+//     }
+
+//     return back()->with('error', 'Error Username or Password');
+//    }
+
+public function loginPost(Request $request){
+    $credentials = [
         'name' => $request->name,
         'password' => $request->password,
     ];
 
-    if (Auth::attempt($credetials)) {
-        return redirect('services')->with('success', 'Login Success');
+
+    if (Auth::attempt($credentials)) {
+        $user = Auth::user();
+
+
+        if ($user->isAdmin()) {
+            return redirect()->route('admin')->with('success', 'Admin Login Success');
+        } else {
+            return redirect()->route('services')->with('success', 'User Login Success');
+        }
     }
 
     return back()->with('error', 'Error Username or Password');
-   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    public function logout()
    {
@@ -54,3 +88,6 @@ class AuthController extends Controller
 
 
 }
+
+
+

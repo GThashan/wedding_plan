@@ -19,16 +19,25 @@
      <h1>Admin Page</h1>
      <div>
 
-       <ul>
-         <li>Add Service</li>
-         <li>View Customer</li>
-       </ul>
+        <ul>
+            <li><a href="{{ route('admin') }}">Add Service</a></li>
+            <li><a href="{{ route('view') }}">View Customer</a></li>
+        </ul>
 
      </div>
    </div>
 
 
  </div>
+ @if(Session::has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('success') }}
+            </div>
+        @endif
 @include('components.Add')
+
+
+
+
 </body>
 </html>

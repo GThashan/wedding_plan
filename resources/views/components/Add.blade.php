@@ -31,15 +31,15 @@
 
                 <td>{{ $product->name }}</td>
                 <td>{{$product->info }}</td>
-                {{-- <td>
+                <td>
 
-                    <form action="{{ route('delete.Productadmin', $product->id) }}" method="POST">
+                    <form action="" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit"><i class="fas fa-trash"></i> delete</button>
                     </form>
 
-                </td> --}}
+                </td>
              </tr>
              @endforeach
            </tbody>

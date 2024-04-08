@@ -29,8 +29,8 @@
                             <a href="">Apporve</a> |
                             <a href="">No</a>
                             {{-- <i class="fas fa-check"></i> --}}
-                            {{-- <a href="#" class="delete-btn"> <i class="fas fa-check"></i></a>
-                            <a href="#" class="option-btn"> <i class="fas fa-times"></i></a> --}}
+                             {{-- <a href="#" class="delete-btn"> <i class="fas fa-check"></i></a> --}}
+                            {{-- <a href="#" class="option-btn"> <i class="fas fa-times"></i></a>  --}}
 
                         </td>
                     </tr>

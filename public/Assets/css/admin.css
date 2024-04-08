@@ -35,6 +35,31 @@ html{
 
  }
 
+ .alert-danger
+{
+    color: #fff;
+    text-align: center;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    height: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.alert-success
+{
+    color: #fff;
+    text-align: center;
+    background-color:green;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+
+}
+
  .nav_items {
    display: flex;
    align-items: center;
@@ -75,6 +100,7 @@ html{
    text-align: center;
    padding: 0 10px;
    margin-right: 20px;
+   cursor: pointer;
  }
 
  li:last-child {
@@ -112,6 +138,7 @@ html{
  li:hover::after {
    width: 120%;
  }
+
 
  .navbar i {
    font-size: 25px;
@@ -713,3 +740,5 @@ section{
    }
 
 }
+
+

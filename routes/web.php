@@ -37,6 +37,8 @@ Route::get('/signUp', [AuthController::class, 'signUp'])->name('signUp');
 Route::post('/signUp', [AuthController::class, 'signUppost'])->name('signUp.post');
 Route::get('/login',[AuthController::class, 'login'])->name('login');
 Route::post('/login',[AuthController::class, 'loginPost'])->name('login.post');
+Route::get('/admin', 'AdminController@dashboard')->name('admin.dashboard');
+
 
 
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
