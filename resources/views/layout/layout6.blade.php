@@ -24,8 +24,8 @@
 
                 <ul>
 
-                    <li>Add Service</li>
-                    <li>View Customer</li>
+                    <a href="{{ route('admin') }}">Add Service</a>
+                    <a href="{{ route('view') }}">View Customer</a>
                 </ul>
 
             </div>

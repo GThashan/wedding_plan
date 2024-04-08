@@ -10,27 +10,11 @@
       <h1>Dream Day</h1>
       <div>
         <ul>
-            <li>Home</li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="#contactUs">Contact Us</a></li>
+            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/ser') }}">Services</a>
+            <a href="{{ url('/ser') }}">Testimonial</a>
+            <a href="{{ url('/ser') }}">Contact Us</a>
 
-            {{-- @if(auth()->check())
-
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        @if(isset($logout_btn))
-                        <button type="submit">Log Out</button>
-                        @endif
-                    </form>
-
-            @else
-
-
-
-            @endif --}}
             <form action="{{ route('login') }}" method="POST">
                 @csrf
                 @method('GET')

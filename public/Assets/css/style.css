@@ -69,7 +69,7 @@
   padding: 0;
 }
 
-.nav_items li {
+.nav_items a {
 
   font-family: 'Poppins', sans-serif;
   display: block;
@@ -89,23 +89,23 @@
   cursor: pointer;
 }
 
-.nav_items li:last-child {
+.nav_items a:last-child {
   margin-right: 0;
 }
-.nav_items li a {
+.nav_items  a {
   text-decoration: none;
   color: #000;
 }
 
-.nav_items li:after,
-.nav_items li:before {
+.nav_items a:after,
+.nav_items a:before {
 content: "";
 position: absolute;
 display: block;
 border: 0px solid transparent;
 }
 
-.nav_items li:after {
+.nav_items a:after {
 width: 0%;
 height: 80%;
 border-top: 2px solid #D63484;
@@ -113,7 +113,7 @@ border-bottom: 2px solid #D63484;
 transition: all 0.3s ease;
 }
 
-.nav_items li:before {
+.nav_items a:before {
 width: 120%;
 height: 0%;
 border-left: 2px solid #D63484;
@@ -121,11 +121,11 @@ border-right: 2px solid #D63484;
 transition: all 0.5s ease;
 }
 
-.nav_items li:hover::before {
+.nav_items a:hover::before {
 height: 80%;
 }
 
-.nav_items li:hover::after {
+.nav_items a:hover::after {
 width: 120%;
 }
 
@@ -138,7 +138,7 @@ cursor: pointer;
     background-color: #D63484;
     color: #fff;
     border: none;
-    padding: 8px 10px;
+    padding: 8px 15px;
     border-radius: 3px;
     font-family: 'Poppins', sans-serif;
 }
@@ -256,7 +256,7 @@ cursor: pointer;
 }
 
 .about_right p{
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     font-size: 15px;
 }
 .about_right button{

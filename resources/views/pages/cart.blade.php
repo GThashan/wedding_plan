@@ -21,7 +21,7 @@
                 <tr rowId="{{ $id }}">
                     <td data-th="Service">{{ $details['name'] }}</td>
                     <td data-th="Price">${{ $details['price'] }}</td>
-                    <td data-th="Subtotal" class="text-center">${{ $subtotal }}</td>
+                    <td data-th="Subtotal" class="text-center">Rs{{ $subtotal }}</td>
                     {{-- <td data-th="Subtotal" class="text-center"></td> --}}
                     <td class="actions">
                         <a class="btn btn-outline-danger btn-sm delete-product"><i class="fa fa-trash-o"></i></a>
@@ -33,7 +33,7 @@
     <tfoot>
         <tr>
             <td colspan="2" class="text-left">Total: </td>
-            <td colspan="1" class="text-center">${{ $total }}</td>
+            <td colspan="1" class="text-center">Rs{{ $total }}</td>
         </tr>
         <tr>
             <td colspan="5" class="text-right">

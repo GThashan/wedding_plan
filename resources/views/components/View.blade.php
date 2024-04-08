@@ -26,7 +26,7 @@
                         <td>{{ $checkout->address }}</td>
                         <td>{{ $checkout->weddingDate}}</td>
                         <td>
-                            <a href="">Apporve</a> |
+                            <a href="">Apporve</a>
                             <a href="">No</a>
                             {{-- <i class="fas fa-check"></i> --}}
                              {{-- <a href="#" class="delete-btn"> <i class="fas fa-check"></i></a> --}}

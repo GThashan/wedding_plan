@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('pages.home');
 });
 Route::get('/ser', function () {
-    return view('pages.ser');
+    return view('pages.Ser');
 });
 Route::get('/checking', function () {
     return view('pages.checking');
@@ -28,8 +28,6 @@ Route::get('/checking', function () {
 Route::get('/admin', function () {
     return view('pages.Adminservice');
 })->name('admin');
-
-
 
 
 
@@ -52,7 +50,6 @@ Route::get('/admin', [ServiceController::class, 'showServices'])->name('admin');
 
 
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
-
 Route::get('/view', [CheckoutController::class, 'showProducts'])->name('view');
 
 

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ asset('Assets/css/service.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
@@ -13,42 +14,16 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
+
+     <h2 class="head">Dream Day</h2>
+
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <h2 class="head">Dream Day</h2>
-        </li>
-        <li class="nav-item">
-            <a class="nav-links"  href="{{ url('/home') }}">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-links" href="#">About</a>
-        </li>
-    </ul>
+    <a class="nav-links home"  href="{{ url('/') }}">Home</a>
     <a class="btn btn-outline-light" href="{{ route('shopping.cart') }}">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Budget <span class="badge bg-danger">{{ count((array) session('cart')) }}</span>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Budget  <span class="badge bg-danger">{{ count((array) session('cart')) }}</span>
     </a>
+</ul>
 
-    {{-- @if(auth()->check())
-
-    <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        @method('DELETE')
-        @if(isset($logout_btn))
-        <button type="submit">Log Out</button>
-        @endif
-    </form>
-
-@else
-
-    <form action="{{ route('login') }}" method="POST">
-        @csrf
-        @method('GET')
-        @if(isset($login_btn))
-        <button type="submit">{{ $login_btn }}</button>
-        @endif
-    </form>
-
-@endif --}}
 
   </div>
 </nav>
@@ -61,12 +36,20 @@
       </div>
 
 
-    @if(session('success'))
-        <div class="alert alert-success">
-          {{ session('success') }}
-        </div>
 
-    @endif
+    <script>
+
+        @if(session('success'))
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: '{{ session('success') }}',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        @endif
+    </script>
 
     @yield('content')
 </div>
@@ -79,17 +62,17 @@
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-{{-- <script src="script/main.js"></script> --}}
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 AOS.init({
-    duration: 1000, // Set the duration to 1000 milliseconds (1 second), adjust as needed
+    duration: 1000,
 });
 });
 </script>
 
-<!-- javascript -->
+
 <script type="text/javascript">
   function search() {
     let filter = document.getElementById('find').value.toUpperCase();

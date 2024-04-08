@@ -20,8 +20,8 @@
      <div>
 
         <ul>
-            <li><a href="{{ route('admin') }}">Add Service</a></li>
-            <li><a href="{{ route('view') }}">View Customer</a></li>
+            <a href="{{ route('admin') }}">Add Service</a>
+            <a href="{{ route('view') }}">View Customer</a>
         </ul>
 
      </div>

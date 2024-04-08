@@ -46,6 +46,17 @@ html{
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.delete{
+    background-color: #D63484;
+    color: white;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.delete:hover{
+    background-color: #be2873;
+
+}
 .alert-success
 {
     color: #fff;
@@ -83,7 +94,7 @@ html{
    padding: 0;
  }
 
- li {
+ a {
 
    font-family: 'Poppins', sans-serif;
    display: block;
@@ -103,7 +114,7 @@ html{
    cursor: pointer;
  }
 
- li:last-child {
+ /* a:last-child {
    margin-right: 0;
  }
 
@@ -137,7 +148,7 @@ html{
 
  li:hover::after {
    width: 120%;
- }
+ } */
 
 
  .navbar i {

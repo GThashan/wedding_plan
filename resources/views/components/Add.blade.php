@@ -36,7 +36,7 @@
                     <form action="" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit"><i class="fas fa-trash"></i> delete</button>
+                        <button type="submit" class="delete"><i class="fas fa-trash"></i> delete</button>
                     </form>
 
                 </td>

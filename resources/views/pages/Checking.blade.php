@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('Assets/css/service.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>Checking</title>
 </head>
 <body>
@@ -12,13 +13,21 @@
 
 <form method="POST" action="{{ route('checkout.store') }}">
     @csrf
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
+
+@if(session('success'))
+    <script>
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: '{{ session('success') }}',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    </script>
 @endif
     <h1>Checkout Form</h1>
-    <p>Pick services within 1000 rupees. Fill out the form. We serve only in Ratnapura. Expect a response in 24 hours.</p>
+    <p>Fill this from to book your services, After checking that we will check and give response for you.</p>
 
     <label for="name">Full Name</label>
     <input type="text" name="name" id="name" placeholder="Enter your full name" required>
@@ -37,11 +46,6 @@
 
     <label for="weddingDate">Wedding Date</label>
     <input type="date" name="weddingDate" id="weddingDate" required>
-
-    {{-- <div class="tearm">
-        <input type="checkbox" id="agree" name="agree" value="1" required>
-        <label for="agree"> Agree with our terms and conditions</label>
-    </div> --}}
 
     <input type="submit" value="Submit">
 </form>

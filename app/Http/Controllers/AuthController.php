@@ -56,12 +56,13 @@ public function loginPost(Request $request){
 
 
         if ($user->isAdmin()) {
-            return redirect()->route('admin')->with('success', 'Admin Login Success');
+            return redirect()->route('admin');
         } else {
-            return redirect()->route('services')->with('success', 'User Login Success');
+            return redirect()->route('services');
         }
     }
-
+    // ->with('success', 'User Login Success')
+    // ->with('success', 'Admin Login Success')
     return back()->with('error', 'Error Username or Password');
 }
 

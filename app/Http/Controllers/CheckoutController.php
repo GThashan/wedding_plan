@@ -25,7 +25,7 @@ class CheckoutController extends Controller
         $checkout->save();
 
 
-        return redirect()->route('checking')->with('success', 'Form submitted successfully!');
+        return redirect()->route('services')->with('success', 'Form submitted successfully!');
     }
 
     public function showProducts()

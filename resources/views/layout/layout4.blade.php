@@ -16,12 +16,18 @@
       <h1>Dream Day</h1>
       <div>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Testimonial</li>
-          <li>Contact Us</li>
-          <i class="fa fa-user" aria-hidden="true"></i>
+            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/ser') }}">Services</a>
+            <button><a href="{{ url('/login') }}">Login</a></button>
+
+            {{-- <form action="{{ route('login') }}" method="POST">
+                @csrf
+                @method('GET')
+                @if(isset($login_btn))
+                <button type="submit" class="log_btn">{{ $login_btn }}</button>
+                @endif
+            </form> --}}
+
         </ul>
 
       </div>

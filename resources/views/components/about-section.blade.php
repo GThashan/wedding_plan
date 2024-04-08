@@ -9,11 +9,13 @@
         data-aos="fade-up-left"
         >
             <h2 >About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum ipsam exercitationem nemo, unde molestiae voluptates, ad modi perferendis ipsum quae minima illum blanditiis a nesciunt asperiores. Voluptas, consequuntur perferendis?</p>
+            <p>With years of experience and a passion for creating unforgettable moments, our team of dedicated professionals is committed to bringing your dream wedding to life. From intimate ceremonies to grand celebrations, we'll work closely with you to design a personalized experience that reflects your unique style and vision.</p>
 
-              <p>Coantact:  07676768</p>
-              <p>Location: Sri Lanka</p>
-              <p>E-mail: Dram@gamil.com</p>
+            <p><i class="fa fa-phone"></i> Contact: 07676768</p>
+
+            <p><i class="fa fa-facebook"></i> Facebook: <a href="https://www.facebook.com/Dreamfacebook.com">Dreamfacebook.com</a></p>
+            <p><i class="fa fa-instagram"></i> Instagram: <a href="https://www.instagram.com/indtra.com">indtra.com</a></p>
+            <p><i class="fa fa-envelope"></i> E-mail: Dream@gmail.com</p>
 
             <button>See More</button>
         </div>
